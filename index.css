@@ -74,19 +74,6 @@ button {
     margin: 10px;
 }
 
-@media screen and (max-width: 800px) {
-    #sidebar {
-        position: absolute;
-        width: 0;
-    }
-    #note {
-        margin-top: 50px;
-    }
-    #menu {
-        display: block !important;
-    }
-}
-
 .heading {
     display: flex;
     background-color: #2D323A;
@@ -182,6 +169,7 @@ form {
     background: #2cb3f0;
     bottom: 0;
     width: 100%;
+    overflow: hidden;
 }
 
 input,
@@ -196,23 +184,11 @@ button {
 input[type="search"] {
     outline: 0;
     background: #fff;
-    border-right: 1px solid black;
+    border-right: .5px solid black;
     appearance: none;
     transition-property: width, border-radius;
     z-index: 1;
     position: relative;
-}
-
-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: auto;
-    height: auto;
-    font-weight: bold;
-    background: #2cb3f0;
-    color: white;
-    z-index: 99;
 }
 
 #sidebar .new-note {
@@ -321,4 +297,24 @@ button {
     cursor: pointer;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+}
+
+@media screen and (max-width: 800px) {
+    #sidebar {
+        position: absolute;
+        width: 0;
+    }
+    #note {
+        margin-top: 50px;
+    }
+    #menu {
+        display: block !important;
+    }
+    #newPage {
+        position: relative;
+        left: 230px;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
 }
