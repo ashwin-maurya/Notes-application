@@ -314,7 +314,7 @@ button {
     color: white;
     line-height: 65px;
     text-align: center;
-    font-size: 23px;
+    font-size: 15px;
     z-index: 100;
     box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
     cursor: pointer;
