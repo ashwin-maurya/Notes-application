@@ -152,6 +152,8 @@ function changeNote(str) {
         // document.getElementById('edit').style.display = "block";
         editNote(str);
     };
+    resize();
+
 
 };
 
