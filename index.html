@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div id="app-wrapper">
+
+        <div id="app">
+            <div class="but" id="menu" onclick="menu()" style="display: none;">
+                <img src="menu.svg" alt="">
+            </div>
+
+            <div id="sidebar">
+
+
+                <div class="heading">
+                    <h2 id="projectName">Quickies</h2>
+                    <div id="newPage">+</div>
+                </div>
+                <ul id="notes-list" class="list">
+                </ul>
+                <form onsubmit="event.preventDefault();" role="search">
+                    <input id="search" type="search" placeholder="Search..." required />
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+            <div id="note">
+                <textarea class="form-control note-title" id="addTitle" placeholder="Title" required></textarea>
+                <textarea class="form-control note-content" id="addTxt" placeholder="Enter your text..." required></textarea>
+                <div class="note-date">Date</div>
+            </div>
+        </div>
+        <div class="floating-container">
+            <div class="floating-button" id="addBtn">+</div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
