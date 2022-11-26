@@ -83,7 +83,7 @@ function showNotes() {
 
 //add new note function
 newPage.addEventListener("click", function() {
-    window.location = "https://ashwin-maurya.github.io/Quickies/";
+    window.location = "https://ashwin-maurya.github.io/Quicky/";
     // if (!addTitle.value == "" || !addTxt.value == "") {
     //     if (confirm("Do You want to save the previous data")) {
     //         add();
