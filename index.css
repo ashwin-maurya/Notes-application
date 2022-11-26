@@ -196,6 +196,7 @@ button {
 input[type="search"] {
     outline: 0;
     background: #fff;
+    border-right: 1px solid black;
     appearance: none;
     transition-property: width, border-radius;
     z-index: 1;
