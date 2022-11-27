@@ -116,7 +116,6 @@ function add() {
 
         notesObj.push(myObj);
         localStorage.setItem("notes", JSON.stringify(notesObj));
-        menu();
         addTitle.value = "";
         addTxt.value = "";
 
