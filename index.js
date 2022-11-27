@@ -120,6 +120,7 @@ function add() {
         addTxt.value = "";
 
     }
+    menu();
     showNotes();
 }
 
@@ -153,7 +154,6 @@ function changeNote(str) {
         editNote(str);
     };
     resize();
-
 
 };
 
