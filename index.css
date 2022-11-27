@@ -101,10 +101,10 @@ button {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    position: absolute;
     z-index: 999;
     right: 0;
     margin: 5px;
+    padding: 10px;
     background-color: #2cb3f0;
 }
 
@@ -305,14 +305,14 @@ input[type="search"] {
         width: 0;
     }
     #note {
-        margin-top: 50px;
+        margin-top: 45px;
     }
     #menu {
         display: block !important;
     }
     #newPage {
-        position: relative;
-        left: 230px;
+        position: fixed;
+        right: 100px;
         width: 30px;
         height: 30px;
         padding: 10px;
