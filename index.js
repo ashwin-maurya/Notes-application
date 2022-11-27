@@ -100,7 +100,7 @@ newPage.addEventListener("click", function() {
 function add() {
 
     if (addTitle.value == "") {
-        alert("Please enter title")
+        alert("Please enter a title to your Note before adding.")
     } else {
         let notes = localStorage.getItem("notes");
 
@@ -126,6 +126,7 @@ function add() {
 
 //edit note function
 function editNote(index) {
+
     let notes = JSON.parse(localStorage.notes);
     notes[index].title = addTitle.value;
     notes[index].text = addTxt.value;
@@ -158,19 +159,23 @@ function changeNote(str) {
 };
 
 function deleteNote(index) {
+    if (confirm("Delete this Note!") == true) {
+        let notes = localStorage.getItem("notes");
+        if (notes == null) {
+            notesObj = [];
+        } else {
+            notesObj = JSON.parse(notes);
+        }
 
-    let notes = localStorage.getItem("notes");
-    if (notes == null) {
-        notesObj = [];
+        notesObj.splice(index, 1);
+        localStorage.setItem("notes", JSON.stringify(notesObj));
+        addTitle.value = "";
+        addTxt.value = "";
+        showNotes();
     } else {
-        notesObj = JSON.parse(notes);
+
     }
 
-    notesObj.splice(index, 1);
-    localStorage.setItem("notes", JSON.stringify(notesObj));
-    addTitle.value = "";
-    addTxt.value = "";
-    showNotes();
 }
 
 
