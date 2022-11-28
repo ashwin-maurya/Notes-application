@@ -312,7 +312,7 @@ input[type="search"] {
     }
     #newPage {
         position: fixed;
-        right: 100px;
+        right: 60px;
         width: 30px;
         height: 30px;
         padding: 10px;
