@@ -194,24 +194,28 @@ function pdf() {
     if (addTitle.value == "") {
         alert("Please add atleast a title to your Note before downloading.")
     } else {
-        add();
-        var pdf = new jsPDF('p', 'pt', 'letter');
-        margins = {
-            top: 80,
-            bottom: 60,
-            left: 40,
-            width: 522
-        };
-        pdf.fromHTML(
-            "<h1>" + title + "</h1>" + "<br>" + desc,
-            margins.left,
-            margins.top, {
-                'width': margins.width
-            },
+        let pdfName = prompt("Please enter PDF name", title);
+        if (pdfName != null) {
+            add();
+            var pdf = new jsPDF('p', 'pt', 'letter');
+            margins = {
+                top: 80,
+                bottom: 60,
+                left: 40,
+                width: 522
+            };
+            pdf.fromHTML(
+                "<h1>" + title + "</h1>" + "<br>" + desc,
+                margins.left,
+                margins.top, {
+                    'width': margins.width
+                },
 
-            function(dispose) {
-                pdf.save('Test.pdf');
-            }, margins
-        );
+                function(dispose) {
+                    pdf.save(pdfName + '.pdf');
+                }, margins
+            );
+        }
+
     }
 };
