@@ -196,8 +196,8 @@ function pdf() {
     } else {
         let pdfName = prompt("Please enter PDF name", title);
         if (pdfName != null) {
-            add();
             var pdf = new jsPDF('p', 'pt', 'letter');
+            pdfName = pdfName.replace(/ /g, "_");
             margins = {
                 top: 80,
                 bottom: 60,
