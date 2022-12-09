@@ -29,9 +29,12 @@
                 </ul>
                 <form>
                     <input id="search" type="search" placeholder="Search..." />
+
+                    <button onclick="pdf()" style="z-index: 9999;" id="download">Download</button>
                 </form>
             </div>
             <div id="note">
+
                 <textarea class="form-control note-title" id="addTitle" placeholder="Title" required></textarea>
                 <textarea class="form-control note-content" id="addTxt" placeholder="Enter your text..." required></textarea>
             </div>
@@ -40,6 +43,7 @@
             <div class="floating-button" id="addBtn">ADD</div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
 
     <script src="index.js"></script>
 </body>

@@ -81,18 +81,10 @@ function showNotes() {
     }
 }
 
-//add new note function
 newPage.addEventListener("click", function() {
     window.location = "https://ashwin-maurya.github.io/Quicky/";
-    // if (!addTitle.value == "" || !addTxt.value == "") {
-    //     if (confirm("Do You want to save the previous data")) {
-    //         add();
-    //     }
-    // } else {
     addTitle.value = "";
     addTxt.value = "";
-    // }
-    // showNotes();
     resize();
 });
 
@@ -116,8 +108,6 @@ function add() {
 
         notesObj.push(myObj);
         localStorage.setItem("notes", JSON.stringify(notesObj));
-        addTitle.value = "";
-        addTxt.value = "";
 
     }
     showNotes();
@@ -197,3 +187,31 @@ search.addEventListener("input", function() {
         }
     })
 })
+
+function pdf() {
+    title = document.getElementById("addTitle").value;
+    desc = document.getElementById("addTxt").value;
+    if (addTitle.value == "") {
+        alert("Please add atleast a title to your Note before downloading.")
+    } else {
+        add();
+        var pdf = new jsPDF('p', 'pt', 'letter');
+        margins = {
+            top: 80,
+            bottom: 60,
+            left: 40,
+            width: 522
+        };
+        pdf.fromHTML(
+            "<h1>" + title + "</h1>" + "<br>" + desc,
+            margins.left,
+            margins.top, {
+                'width': margins.width
+            },
+
+            function(dispose) {
+                pdf.save('Test.pdf');
+            }, margins
+        );
+    }
+};
