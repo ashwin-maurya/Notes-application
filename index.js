@@ -110,6 +110,8 @@ function add() {
         localStorage.setItem("notes", JSON.stringify(notesObj));
 
     }
+    addTitle.value = "";
+    addTxt.value = "";
     showNotes();
 }
 
