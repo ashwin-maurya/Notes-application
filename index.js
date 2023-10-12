@@ -82,7 +82,7 @@ function showNotes() {
 }
 
 newPage.addEventListener("click", function() {
-    window.location = "https://ashwin-maurya.github.io/Quicky/";
+    window.location ="https://ashwin-maurya.github.io/Notes-application/";
     addTitle.value = "";
     addTxt.value = "";
     resize();
